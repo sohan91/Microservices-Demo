@@ -14,3 +14,11 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+  config:
+    import:
+      - "application_prod.yml"
+      - "application_qa.yml"
+
+app:
+  version: "1.0.0 - Default"
