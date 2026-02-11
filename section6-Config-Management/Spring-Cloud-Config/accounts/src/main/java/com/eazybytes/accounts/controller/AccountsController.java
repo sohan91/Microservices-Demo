@@ -197,7 +197,7 @@ public class AccountsController {
     @GetMapping("/version")
     public ResponseEntity<String> getVersion()
     {
-        return ResponseEntity.status(HttpStatus.OK).body(environment.getProperty("app.version"));
+        return ResponseEntity.status(HttpStatus.OK).body(environment.getProperty("app.version",String.class));
     }
 
 }
