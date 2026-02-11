@@ -1,0 +1,12 @@
+
+app:
+  version: "1.1"
+
+student:
+  message: "John Personal Details from QA environment"
+  identity:
+    name: "smith-qa"
+    email: "smith@gmail.com"
+  phoneNumber:
+    - "(QA)3242342423"
+    - "(QA)3242342342"

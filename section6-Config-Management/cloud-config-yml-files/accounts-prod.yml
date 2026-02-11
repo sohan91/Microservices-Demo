@@ -1,0 +1,12 @@
+
+app:
+  version: "1.3"
+
+student:
+  message: "John Personal Details from Prod environment"
+  identity:
+    name: "smith-Prod"
+    email: "smith@gmail.com"
+  phoneNumber:
+    - "(Prod)3242342423"
+    - "(Prod)3242342342"

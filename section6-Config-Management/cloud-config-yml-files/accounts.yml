@@ -1,0 +1,12 @@
+
+app:
+  version: "1.0.0"
+
+student:
+  message: "John Personal Details"
+  identity:
+    name: "John"
+    email: "john@gmail.com"
+  phoneNumber:
+    - 3242342423
+    - 3242342342
