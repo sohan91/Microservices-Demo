@@ -3,7 +3,7 @@ app:
   version: "1.3"
 
 student:
-  message: "John Personal Details from Production Environment Activated"
+  message: "John Personal Details from Prod Environment Activated"
   identity:
     name: "smith-Prod"
     email: "{cipher}3c76e23eea6602201361091d9229429996a7f9d588a890bb30352eee1c18eda6"
