@@ -6,7 +6,7 @@ student:
   message: "John Personal Details from Prod environment"
   identity:
     name: "smith-Prod"
-    email: "3c76e23eea6602201361091d9229429996a7f9d588a890bb30352eee1c18eda6"
+    email: "{cipher}3c76e23eea6602201361091d9229429996a7f9d588a890bb30352eee1c18eda6"
   phoneNumber:
     - "(Prod)3242342423"
     - "(Prod)3242342342"
