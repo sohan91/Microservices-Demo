@@ -6,7 +6,7 @@ student:
   message: "John Personal Details"
   identity:
     name: "John"
-    email: "8138439b92b332ed7ba19d1cc0fd1c267bd119b1d831b18d69b02b39757f3f7b"
+    email: "{cipher}8138439b92b332ed7ba19d1cc0fd1c267bd119b1d831b18d69b02b39757f3f7b"
   phoneNumber:
     - 3242342423
     - 3242342342
