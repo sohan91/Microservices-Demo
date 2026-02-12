@@ -6,7 +6,7 @@ student:
   message: "John Personal Details from QA environment"
   identity:
     name: "smith-qa"
-    email: "3c76e23eea6602201361091d9229429996a7f9d588a890bb30352eee1c18eda6"
+    email: "{cipher}3c76e23eea6602201361091d9229429996a7f9d588a890bb30352eee1c18eda6"
   phoneNumber:
     - "(QA)3242342423"
     - "(QA)3242342342"
