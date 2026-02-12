@@ -3,7 +3,7 @@ app:
   version: "1.1"
 
 student:
-  message: "John Personal Details from QA-Testing Environment is Activated"
+  message: "John Personal Details from QA-Test Environment is Activated"
   identity:
     name: "smith-qa"
     email: "{cipher}3c76e23eea6602201361091d9229429996a7f9d588a890bb30352eee1c18eda6"
