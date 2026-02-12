@@ -8,8 +8,6 @@ spring:
     config:
       server:
 
-#          search-locations: "file:///D:/SOHAN/MicroServices/section6-Config-Management/cloud-config-yml-files"
-#
         git:
           uri: https://github.com/sohan91/Microservices-Demo.git
           search-paths: section6-Config-Management/cloud-config-yml-files
@@ -20,4 +18,10 @@ spring:
 server:
   port: "8071"
 
-
+encrypt:
+  key: "3wue27e37iriqubd732@040923#"
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"

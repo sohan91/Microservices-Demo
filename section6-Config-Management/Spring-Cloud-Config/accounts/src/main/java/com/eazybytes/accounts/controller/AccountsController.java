@@ -181,12 +181,7 @@ public class AccountsController {
     @GetMapping("/default-account")
     public ResponseEntity<DefaultAccountConfigDto> getAppVersion()
     {
-        Map<String,String> map= new HashMap<>();
-        map.put("man","mangmail.com");
-        map.put("mans","mansgmail.com");
-
-        DefaultAccountConfigDto dto = new DefaultAccountConfigDto(defaultAccountConfigDto.message(), map, Arrays.asList("23234","32424324"));
-        return ResponseEntity.status(HttpStatus.OK).body(dto);
+        return ResponseEntity.status(HttpStatus.OK).body(defaultAccountConfigDto);
     }
 
     @GetMapping("/path")

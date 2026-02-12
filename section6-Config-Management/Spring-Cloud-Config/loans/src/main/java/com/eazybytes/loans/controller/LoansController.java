@@ -40,6 +40,7 @@ public class LoansController {
     private final ILoansService iLoansService;
     private final Environment environment;
 
+    @Autowired
     LoansController(ILoansService iLoansService,Environment environment)
     {
         this.iLoansService = iLoansService;
@@ -47,8 +48,6 @@ public class LoansController {
     }
 
 
-    @Value("${app.version}")
-    private String appVersion;
 
     @Operation(
             summary = "Create Loan REST API",
@@ -181,6 +180,6 @@ public class LoansController {
     @GetMapping("/version")
     public ResponseEntity<String> getVersion()
     {
-        return ResponseEntity.status(HttpStatus.OK).body(environment.getProperty("app.version"));
+        return ResponseEntity.status(HttpStatus.OK).body(environment.getProperty("app.version",String.class));
     }
 }
