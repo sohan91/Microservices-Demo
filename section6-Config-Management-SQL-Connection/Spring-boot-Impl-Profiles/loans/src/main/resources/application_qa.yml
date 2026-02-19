@@ -1,9 +1,0 @@
-
-spring:
-  config:
-    activate:
-      on-profile: qa
-
-
-app:
-  version: "1.2.0 - QA(Loan)"
