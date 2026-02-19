@@ -117,11 +117,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <image>
-                        <name>sohan91/${project.artifactId}:s4</name>
-                    </image>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>com.google.cloud.tools</groupId>
@@ -129,7 +124,7 @@
                 <version>3.5.1</version>
                 <configuration>
                     <to>
-                        <image>docker.io/${project.artifactId}:s6</image>
+                        <image>docker.io/sohan91/${project.artifactId}:s6</image>
                     </to>
                 </configuration>
             </plugin>

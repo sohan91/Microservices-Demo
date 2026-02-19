@@ -138,7 +138,7 @@
                 <version>3.4.0</version>
                 <configuration>
                     <to>
-                        <image>docker.io/${project.artifactId}:s6</image>
+                        <image>docker.io/sohan91/${project.artifactId}:s6</image>
                     </to>
                 </configuration>
             </plugin>
