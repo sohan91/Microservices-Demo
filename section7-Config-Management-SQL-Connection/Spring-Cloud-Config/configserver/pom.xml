@@ -32,20 +32,6 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
-
-		<!-- Monitor (GitHub Webhook Support) -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-monitor</artifactId>
-		</dependency>
-
-		<!-- Spring Cloud Bus with RabbitMQ -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
-		</dependency>
-
-		<!-- Actuator -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -92,7 +78,7 @@
 				<version>3.4.0</version>
 				<configuration>
 					<to>
-						<image>docker.io/sohan91/${project.artifactId}:s6</image>
+						<image>docker.io/sohan91/${project.artifactId}:s7</image>
 					</to>
 				</configuration>
 			</plugin>
