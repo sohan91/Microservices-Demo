@@ -14,7 +14,7 @@ import lombok.Data;
         name = "CustomerDetailsDto",
         description = "Schema to hold Customer's Loans and Cards information"
 )
-public class CustomerDetainsDto {
+public class CustomerDetailsDto {
 
 
     @Schema(
