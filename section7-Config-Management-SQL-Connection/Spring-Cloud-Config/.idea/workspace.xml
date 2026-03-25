@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2dedb703-0721-4948-ad2b-b673826e4c08" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/accounts-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/accounts-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/accounts-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/accounts-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/surefire-reports/2026-02-07T18-20-16_097.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/surefire-reports/2026-02-08T17-10-32_680.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/surefire-reports/TEST-com.eazybytes.accounts.AccountsApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/surefire-reports/TEST-com.eazybytes.accounts.AccountsApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/surefire-reports/com.eazybytes.accounts.AccountsApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../section3-Account-Cards-Loans-MIcroservices -Docker/accounts/target/surefire-reports/com.eazybytes.accounts.AccountsApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker-Compose/prod/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Docker-Compose/prod/common-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker-Compose/prod/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Docker-Compose/prod/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/target/jib-image.digest" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/target/jib-image.digest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/target/jib-image.id" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/target/jib-image.id" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/target/jib-image.json" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/target/jib-image.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/target/jib-image.digest" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/jib-image.digest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/target/jib-image.id" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/jib-image.id" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/target/jib-image.json" beforeDir="false" afterPath="$PROJECT_DIR$/loans/target/jib-image.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/dto/AccountsDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/dto/AccountsDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/dto/CustomerDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/dto/CustomerDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/dto/DefaultAccountConfigDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/dto/DefaultAccountConfigDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/dto/ErrorResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/dto/ErrorResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/dto/JavaVersionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/dto/JavaVersionDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/dto/ResponseDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/dto/ResponseDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/entity/Accounts.class" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/entity/Accounts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/entity/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/entity/BaseEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/entity/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/entity/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/exception/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/service/impl/AccountsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/classes/com/eazybytes/accounts/service/impl/AccountsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/accounts/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/cards/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/cards/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/cards/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/cards/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/loans/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/loans/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/loans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/loans/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/loans/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/loans/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/loans/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/loans/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/loans/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../v3-spring-boot-using-ConfigAnnotation/loans/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="3BIEB1gVMxuDe0kiAGoApZACNOz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2dedb703-0721-4948-ad2b-b673826e4c08" name="Changes" comment="" />
+      <created>1774168044982</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774168044982</updated>
+    </task>
+    <servers />
+  </component>
+</project>

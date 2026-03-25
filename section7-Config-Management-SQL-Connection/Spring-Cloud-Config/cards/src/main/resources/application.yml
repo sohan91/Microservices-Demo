@@ -6,9 +6,9 @@ spring:
   profiles:
     active: "prod"
   datasource:
-    url: jdbc:mysql://localhost:3309/cardsdb
-    username: sohan
-    password: sohan@123
+    url: jdbc:mysql://cardsdb:3306/cardsdb
+    username: root
+    password: roots
   jpa:
     show-sql: true
   sql:

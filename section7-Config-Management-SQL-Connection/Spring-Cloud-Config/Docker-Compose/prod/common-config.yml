@@ -1,10 +1,27 @@
 services:
-  # Base network config
+
+  # ------------------ BASE NETWORK ------------------
   network-deploy-service:
     networks:
       - eazybank
 
-  # Base microservice config (shared by all microservices)
+  # ------------------ DATABASE BASE CONFIG ------------------
+  microservice-db-config:
+    extends:
+      service: network-deploy-service
+    image: mysql:latest
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 10
+      interval: 10s
+      start_period: 10s
+    environment:
+      MYSQL_ROOT_PASSWORD: roots   # Consistent password for all DBs
+    networks:
+      - eazybank
+
+  # ------------------ BASE CONFIG FOR MICROSERVICES ------------------
   microservice-base-config:
     extends:
       service: network-deploy-service
@@ -12,14 +29,21 @@ services:
       resources:
         limits:
           memory: 700m
-    environment:
-      SPRING_RABBITMQ_HOST: "rabbit"
-      # All microservices will fetch config from Config Server
+    networks:
+      - eazybank
 
-  # Config Server specific config
+  # ------------------ CONFIG SERVER BASE ------------------
   microservice-configserver-config:
     extends:
       service: microservice-base-config
     environment:
       SPRING_PROFILES_ACTIVE: prod
-      SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
+      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:8071/
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: roots
+    networks:
+      - eazybank
+
+networks:
+  eazybank:
+    driver: bridge

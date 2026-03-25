@@ -1,165 +1,125 @@
 services:
 
-  # =========================
-  # Accounts DB
-  # =========================
+  # ------------------ DATABASES ------------------
+
   accountsdb:
-    image: mysql
+    extends:
+      file: common-config.yml
+      service: microservice-db-config
     container_name: accountsdb
     ports:
-      - 3307:3306
-    healthcheck:
-      test: ["CMD","mysqladmin","ping","-h","localhost"]
-      interval: 10s
-      timeout: 5s
-      retries: 10
-      start_period: 20s
+      - "3307:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: accountsdb
-      MYSQL_USER: sohan
-      MYSQL_PASSWORD: sohan@123
+      MYSQL_ROOT_PASSWORD: roots
+    volumes:
+      - accounts-data:/var/lib/mysql
+
+  loansdb:
     extends:
       file: common-config.yml
-      service: network-deploy-service
-
-
-  # =========================
-  # Loans DB
-  # =========================
-  loansdb:
-    image: mysql
+      service: microservice-db-config
     container_name: loansdb
     ports:
-      - 3308:3306
-    healthcheck:
-      test: ["CMD","mysqladmin","ping","-h","localhost"]
-      interval: 10s
-      timeout: 5s
-      retries: 10
-      start_period: 20s
+      - "3308:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: loansdb
-      MYSQL_USER: sohan
-      MYSQL_PASSWORD: sohan@123
+      MYSQL_ROOT_PASSWORD: roots
+    volumes:
+      - loans-data:/var/lib/mysql
+
+  cardsdb:
     extends:
       file: common-config.yml
-      service: network-deploy-service
-
-
-  # =========================
-  # Cards DB
-  # =========================
-  cardsdb:
-    image: mysql
+      service: microservice-db-config
     container_name: cardsdb
     ports:
-      - 3309:3306
-    healthcheck:
-      test: ["CMD","mysqladmin","ping","-h","localhost"]
-      interval: 10s
-      timeout: 5s
-      retries: 10
-      start_period: 20s
+      - "3309:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: cardsdb
-      MYSQL_USER: sohan
-      MYSQL_PASSWORD: sohan@123
+      MYSQL_ROOT_PASSWORD: roots
+    volumes:
+      - cards-data:/var/lib/mysql
+
+  # ------------------ CONFIG SERVER ------------------
+
+  configserver:
     extends:
       file: common-config.yml
-      service: network-deploy-service
-
-
-  # =========================
-  # Config Server
-  # =========================
-  configserver:
+      service: microservice-configserver-config
     image: "sohan91/configserver:s7"
     container_name: configserver-ms
     ports:
       - "8071:8071"
     healthcheck:
-      test: ["CMD-SHELL", "curl --fail --silent http://configserver:8071/actuator/health/readiness | grep UP || exit 1"]
+      test: ["CMD", "curl", "-f", "http://localhost:8071/actuator/health"]
       interval: 10s
       timeout: 5s
       retries: 10
-      start_period: 20s
+      start_period: 10s
+
+  # ------------------ MICROSERVICES ------------------
+
+  accounts:
     extends:
       file: common-config.yml
-      service: microservice-base-config
-
-
-  # =========================
-  # Accounts Microservice
-  # =========================
-  accounts:
+      service: microservice-configserver-config
     image: "sohan91/accounts:s7"
     container_name: accounts-ms
     ports:
       - "8080:8080"
+    environment:
+      SPRING_APPLICATION_NAME: "accounts"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://accountsdb:3306/accountsdb"
     depends_on:
       accountsdb:
         condition: service_healthy
       configserver:
         condition: service_healthy
-    environment:
-      SPRING_APPLICATION_NAME: "accounts"
-      SPRING_DATASOURCE_URL: "jdbc:mysql://accountsdb:3306/accountsdb"
-      SPRING_DATASOURCE_USERNAME: sohan
-      SPRING_DATASOURCE_PASSWORD: sohan@123
+
+  loans:
     extends:
       file: common-config.yml
       service: microservice-configserver-config
-
-
-  # =========================
-  # Loans Microservice
-  # =========================
-  loans:
     image: "sohan91/loans:s7"
     container_name: loans-ms
     ports:
       - "8090:8090"
+    environment:
+      SPRING_APPLICATION_NAME: "loans"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://loansdb:3306/loansdb"
     depends_on:
       loansdb:
         condition: service_healthy
       configserver:
         condition: service_healthy
-    environment:
-      SPRING_APPLICATION_NAME: "loans"
-      SPRING_DATASOURCE_URL: "jdbc:mysql://loansdb:3306/loansdb"
-      SPRING_DATASOURCE_USERNAME: sohan
-      SPRING_DATASOURCE_PASSWORD: sohan@123
+
+  cards:
     extends:
       file: common-config.yml
       service: microservice-configserver-config
-
-
-  # =========================
-  # Cards Microservice
-  # =========================
-  cards:
     image: "sohan91/cards:s7"
     container_name: cards-ms
     ports:
       - "9000:9000"
+    environment:
+      SPRING_APPLICATION_NAME: "cards"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://cardsdb:3306/cardsdb"
     depends_on:
       cardsdb:
         condition: service_healthy
       configserver:
         condition: service_healthy
-    environment:
-      SPRING_APPLICATION_NAME: "cards"
-      SPRING_DATASOURCE_URL: "jdbc:mysql://cardsdb:3306/cardsdb"
-      SPRING_DATASOURCE_USERNAME: sohan
-      SPRING_DATASOURCE_PASSWORD: sohan@123
-    extends:
-      file: common-config.yml
-      service: microservice-configserver-config
 
+# ------------------ NETWORKS ------------------
 
 networks:
   eazybank:
     driver: bridge
+
+# ------------------ VOLUMES ------------------
+
+volumes:
+  accounts-data:
+  loans-data:
+  cards-data:
