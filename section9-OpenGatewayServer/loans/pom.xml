@@ -106,7 +106,7 @@
                 <version>3.5.1</version>
                 <configuration>
                     <to>
-                        <image>docker.io/sohan91/${project.artifactId}:s8</image>
+                        <image>docker.io/sohan91/${project.artifactId}:s9</image>
                     </to>
                 </configuration>
             </plugin>
@@ -115,7 +115,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
         </plugins>
     </build>
 

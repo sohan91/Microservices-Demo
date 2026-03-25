@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ICustomerService{
-    CustomerDetailsDto findByNumber(String number);
+    CustomerDetailsDto findByNumber(String number,String correlationId);
 }

@@ -29,10 +29,18 @@ management:
   endpoint:
     shutdown:
       access: unrestricted
+    health:
+      probes:
+        enabled: true
+
   info:
     env:
       enabled: true
-
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
 eureka:
   instance:
     preferIpAddress: true
@@ -47,3 +55,8 @@ info:
     name: "cards"
     description: "Eazy Bank Cards Application"
     version: "1.0.0"
+logging:
+  level:
+    com:
+      eazybytes:
+        cards: DEBUG

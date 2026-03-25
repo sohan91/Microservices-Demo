@@ -1,125 +1,63 @@
 server:
   port: 8090
-  address: 0.0.0.0  # Listen on all network interfaces
-
 spring:
   application:
-    name: loans
-
+    name: "loans"
   profiles:
-    active: default  # Changed from 'prod' to 'default' for local development
-
+    active: "prod"
   datasource:
-    url: jdbc:h2:mem:loansdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE  # Changed to H2 for local development
+    url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
     username: sa
     password: ''
-    # If you want to keep MySQL, use this instead:
-    # url: jdbc:mysql://localhost:3306/loansdb
-    # username: root
-    # password: roots
-
   h2:
     console:
       enabled: true
-      path: /h2-console
-
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect  # Change to MySQLDialect if using MySQL
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
     show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-
-  sql:
-    init:
-      mode: always
-
   config:
-    import: optional:configserver:http://localhost:8071/
+    import: "optional:configserver:http://localhost:8071/"
 
-# Management endpoints
 management:
   endpoints:
     web:
       exposure:
-        include: "health,info,shutdown"
-      base-path: /actuator
+        include: "*"
   endpoint:
+    shutdown:
+      access: unrestricted
     health:
-      show-details: always
       probes:
         enabled: true
-    info:
+  health:
+    readiness-state:
       enabled: true
-    shutdown:
-      enabled: true
+    liveness-state:
+      enabled: tru
   info:
     env:
       enabled: true
 
-# Application information
-info:
-  app:
-    name: ${spring.application.name}
-    description: Loans Service Application
-    version: 1.0.0
-    java:
-      version: ${java.version}
-      vendor: ${java.vendor}
-    environment: ${spring.profiles.active:default}
-    server:
-      port: ${server.port}
-      ip: ${spring.cloud.client.ip-address:127.0.0.1}
-      hostname: ${eureka.instance.hostname:localhost}
-  network:
-    ip-address: ${spring.cloud.client.ip-address:unknown}
-    hostname: ${eureka.instance.hostname:localhost}
-  build:
-    artifact: loans
-    group: com.eazybytes
-    version: 1.0.0
-  spring:
-    version: ${spring.version}
-    cloud:
-      version: ${spring-cloud.version:unknown}
-
-# Eureka Service Discovery Configuration
 eureka:
   instance:
-    hostname: localhost
-    prefer-ip-address: false
-    instance-id: ${spring.application.name}:${server.port}
-    non-secure-port: ${server.port}
-    status-page-url-path: /actuator/info
-    health-check-url-path: /actuator/health
-    lease-renewal-interval-in-seconds: 30
-    lease-expiration-duration-in-seconds: 90
-    appname: ${spring.application.name}
-    vip-address: ${spring.application.name}
-    secure-vip-address: ${spring.application.name}
-    metadata-map:
-      ip-address: ${spring.cloud.client.ip-address}
-      hostname: ${eureka.instance.hostname}
-
+    preferIpAddress: true
   client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
       defaultZone: http://localhost:8070/eureka/
-    healthcheck:
-      enabled: false
-    initial-instance-info-replication-interval-seconds: 10
-    instance-info-replication-interval-seconds: 30
 
-# Logging for debugging
+info:
+  app:
+    name: "loans"
+    description: "Eazy Bank Loans Application"
+    version: "1.0.0"
+
 logging:
   level:
-    com.netflix.discovery: INFO
-    org.springframework.cloud.netflix.eureka: INFO
-    org.springframework.boot.actuate: INFO
-    com.eazybytes.loans: DEBUG
-  pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    com:
+      eazybytes:
+        loans: DEBUG

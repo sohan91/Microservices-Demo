@@ -12,13 +12,12 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.constraints.Pattern;
 import org.apache.http.HttpStatus;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Tag(
         name = "RestAPI for Customer in EazyBank",
@@ -30,6 +29,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class CustomerController {
 
    private final ICustomerService customerService;
+
+   private static final Logger logging = LoggerFactory.getLogger(CustomerController.class);
 
    public CustomerController(ICustomerService customerService)
    {
@@ -57,12 +58,15 @@ public class CustomerController {
     )
     @GetMapping(value = "/fetchCustomerDetails")
     public ResponseEntity<CustomerDetailsDto> fetchCustomerDetails(
+
                         @RequestParam
                         @Pattern(regexp="(^$|[0-9]{10})",message = "Mobile number must be 10 digits")
-                        String mobileNumber
+                        String mobileNumber,     @RequestHeader("eazybank-correlation-id")
+    String correlationId
                 )
     {
-               CustomerDetailsDto customerDetailsDto = customerService.findByNumber(mobileNumber);
+        logging.debug("EazyBank-correlationId-found : {}",correlationId);
+               CustomerDetailsDto customerDetailsDto = customerService.findByNumber(mobileNumber,correlationId);
                return ResponseEntity.status(HttpStatus.SC_OK).body(customerDetailsDto);
     }
 

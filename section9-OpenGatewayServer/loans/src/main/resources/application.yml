@@ -29,6 +29,14 @@ management:
   endpoint:
     shutdown:
       access: unrestricted
+    health:
+      probes:
+        enabled: true
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: tru
   info:
     env:
       enabled: true
@@ -47,3 +55,9 @@ info:
     name: "loans"
     description: "Eazy Bank Loans Application"
     version: "1.0.0"
+
+logging:
+  level:
+    com:
+      eazybytes:
+        loans: DEBUG

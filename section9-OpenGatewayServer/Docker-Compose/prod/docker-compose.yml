@@ -1,11 +1,11 @@
 services:
   configserver:
-    image: "sohan91/configserver:s8"
+    image: "sohan91/configserver:s9"
     container_name: configserver-ms
     ports:
       - "8071:8071"
     healthcheck:
-      test: "curl --fail --silent localhost:8071/actuator/health/readiness | grep UP || exit 1"
+      test: ["CMD", "curl", "-f", "http://localhost:8071/actuator/health/readiness"]
       interval: 10s
       timeout: 5s
       retries: 10
@@ -15,7 +15,7 @@ services:
       service: microservice-base-config
 
   eurekaserver:
-    image: "sohan91/eurekaserver:s8"
+    image: "sohan91/eurekaserver:s9"
     container_name: eurekaserver-ms
     ports:
       - "8070:8070"
@@ -23,7 +23,7 @@ services:
       configserver:
         condition: service_healthy
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8070/actuator/health"]
+      test: ["CMD", "curl", "-f", "http://localhost:8070/actuator/health/readiness"]
       interval: 10s
       timeout: 5s
       retries: 10
@@ -35,77 +35,91 @@ services:
       SPRING_APPLICATION_NAME: "eurekaserver"
 
   accounts:
-    image: "sohan91/accounts:s8"
+    image: "sohan91/accounts:s9"
     container_name: accounts-ms
     ports:
       - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/actuator/health/readiness"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
     depends_on:
       configserver:
         condition: service_healthy
       eurekaserver:
-        condition: service_started
+        condition: service_healthy
     environment:
       SPRING_APPLICATION_NAME: "accounts"
-      EUREKA_INSTANCE_INSTANCE_ID: "accounts-ms:8080"
-      EUREKA_INSTANCE_HOSTNAME: "accounts-ms"
-      EUREKA_INSTANCE_NON_SECURE_PORT: "8080"
     extends:
       file: common-config.yml
       service: microservice-eureka-config
 
   loans:
-    image: "sohan91/loans:s8"
+    image: "sohan91/loans:s9"
     container_name: loans-ms
     ports:
       - "8090:8090"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8090/actuator/health/readiness"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
     depends_on:
       configserver:
         condition: service_healthy
       eurekaserver:
-        condition: service_started
+        condition: service_healthy
     environment:
       SPRING_APPLICATION_NAME: "loans"
-      EUREKA_INSTANCE_INSTANCE_ID: "loans-ms:8090"
-      EUREKA_INSTANCE_HOSTNAME: "loans-ms"
-      EUREKA_INSTANCE_NON_SECURE_PORT: "8090"
     extends:
       file: common-config.yml
       service: microservice-eureka-config
 
-  loans2:
-    image: "sohan91/loans:s8"
-    container_name: loans-ms2
+  gatewayserver:
+    image: "sohan91/gatewayserver:s9"
+    container_name: gatewayserver-ms
     ports:
-      - "8091:8091"
+      - "8072:8072"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8072/actuator/health/readiness"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
     depends_on:
-      configserver:
+      accounts:
         condition: service_healthy
-      eurekaserver:
-        condition: service_started
+      loans:
+        condition: service_healthy
+      cards:
+        condition: service_healthy
     environment:
-      SPRING_APPLICATION_NAME: "loans"
-      EUREKA_INSTANCE_INSTANCE_ID: "loans-ms2:8091"
-      EUREKA_INSTANCE_HOSTNAME: "loans-ms2"
-      EUREKA_INSTANCE_NON_SECURE_PORT: "8091"
+      SPRING_APPLICATION_NAME: "gatewayserver"
     extends:
       file: common-config.yml
       service: microservice-eureka-config
 
   cards:
-    image: "sohan91/cards:s8"
+    image: "sohan91/cards:s9"
     container_name: cards-ms
     ports:
       - "9000:9000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/actuator/health/readiness"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
     depends_on:
       configserver:
         condition: service_healthy
       eurekaserver:
-        condition: service_started
+        condition: service_healthy
     environment:
       SPRING_APPLICATION_NAME: "cards"
-      EUREKA_INSTANCE_INSTANCE_ID: "cards-ms:9000"
-      EUREKA_INSTANCE_HOSTNAME: "cards-ms"
-      EUREKA_INSTANCE_NON_SECURE_PORT: "9000"
     extends:
       file: common-config.yml
       service: microservice-eureka-config

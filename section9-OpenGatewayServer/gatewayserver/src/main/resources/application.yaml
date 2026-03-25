@@ -1,3 +1,49 @@
 spring:
   application:
     name: gatewayserver
+  
+  config:
+    import: "optional:configserver:http://localhost:8071/"
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+server:
+  port: 8072
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8070/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "gatewayserver"
+    description: "Eazy Gateway Server Application"
+    version: "1.0.0"
+    java:
+      version: "17"
+
+logging:
+  level:
+    com:
+      eazybytes:
+        gatewayserver: DEBUG
