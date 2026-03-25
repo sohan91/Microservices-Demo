@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="35bec8f9-d60f-4538-a887-60ba0dff2685" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/section8-ServiceDiscovery-Eureka/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/section8-ServiceDiscovery-Eureka/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section9-OpenGatewayServer/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/section9-OpenGatewayServer/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section9-OpenGatewayServer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/section9-OpenGatewayServer/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section9-OpenGatewayServer/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/section9-OpenGatewayServer/accounts/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section9-OpenGatewayServer/cards/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/section9-OpenGatewayServer/cards/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section9-OpenGatewayServer/configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/section9-OpenGatewayServer/configserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section9-OpenGatewayServer/eurekaserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/section9-OpenGatewayServer/eurekaserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/section9-OpenGatewayServer/loans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/section9-OpenGatewayServer/loans/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="3BQPLVhTO9IXFiGetiKB54otwNi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="35bec8f9-d60f-4538-a887-60ba0dff2685" name="Changes" comment="" />
+      <created>1774418267061</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774418267061</updated>
+    </task>
+    <servers />
+  </component>
+</project>
