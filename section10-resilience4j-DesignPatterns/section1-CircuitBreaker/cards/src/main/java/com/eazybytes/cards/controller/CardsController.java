@@ -178,6 +178,8 @@ public class CardsController {
         }
     }
 
+
+
     @GetMapping("/version")
     public ResponseEntity<String> getAppVersion()
     {

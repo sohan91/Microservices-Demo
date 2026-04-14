@@ -46,6 +46,13 @@ info:
     java:
       version: "17"
 
+  data:
+    redis:
+      connect-timeout: 2s
+      host: localhost
+      port: 6379
+      timeout: 1s
+
 logging:
   level:
     com:

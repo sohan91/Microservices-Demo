@@ -106,7 +106,7 @@
                 <version>3.5.1</version>
                 <configuration>
                     <to>
-                        <image>docker.io/sohan91/${project.artifactId}:s9</image>
+                        <image>docker.io/sohan91/${project.artifactId}:s10</image>
                     </to>
                 </configuration>
             </plugin>

@@ -12,15 +12,16 @@
         <module name="configserver" />
         <module name="loans" />
       </profile>
-      <profile name="Annotation profile for accounts" enabled="true">
+      <profile name="Annotation profile for cards" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar" />
         </processorPath>
-        <module name="accounts" />
         <module name="cards" />
+        <module name="accounts" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

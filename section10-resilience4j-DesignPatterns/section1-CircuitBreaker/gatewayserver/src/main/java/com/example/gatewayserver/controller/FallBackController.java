@@ -13,6 +13,5 @@ public class FallBackController {
     public Mono<String> sendErrorMessage()
     {
         return Mono.just("An error occurred!! Please try again or contact to support team %s");
-
     }
 }
