@@ -1,0 +1,56 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: cards
+
+  # 🔥 IMPORTANT: Disable Config Server COMPLETELY
+  config:
+    import: "optional:configserver:"   # prevents crash
+
+  cloud:
+    config:
+      enabled: false
+      fail-fast: false
+
+  # ================= DB =================
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# ================= EUREKA =================
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+
+# ================= ACTUATOR =================
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+logging:
+  level:
+    com:
+      eazybytes:
+        accounts: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
